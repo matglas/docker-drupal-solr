@@ -13,7 +13,7 @@ RUN apt-get update && \
     curl \
     procps
 
-ENV SOLR_VERSION 4.6.1
+ENV SOLR_VERSION 4.7.2
 ENV SOLR solr-$SOLR_VERSION
 
 # download and install solr
