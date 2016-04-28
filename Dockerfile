@@ -19,7 +19,7 @@ RUN apt-get update && \
 # download and install solr
 WORKDIR /tmp
 RUN mkdir -p /opt && \
-    wget --progress=bar:force --output-document=/opt/$SOLR.tgz http://www.mirrorservice.org/sites/ftp.apache.org/lucene/solr/$SOLR_VERSION/$SOLR.tgz && \
+    wget --progress=bar:force --output-document=/opt/$SOLR.tgz http://archive.apache.org/dist/lucene/solr/$SOLR_VERSION/$SOLR.tgz && \
     tar -C /opt --extract --file /opt/$SOLR.tgz && \
     rm /opt/$SOLR.tgz && \
     ln -s /opt/$SOLR /opt/solr
